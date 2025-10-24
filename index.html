@@ -1,233 +1,72 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Max Hampshire</title>
-    <style>
-      :root {
-        --background: #000000;
-        --foreground: #ffffff;
-        --primary: #ffa500;
-        --secondary: #888;
-        --border: #333;
-        --accent: #ffcc00;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Courier New', Courier, monospace;
-        background-color: var(--background);
-        color: var(--foreground);
-        padding: 2rem;
-        line-height: 1.6;
-      }
-
-      a {
-        color: var(--primary);
-        text-decoration: underline;
-      }
-
-      a:hover {
-        color: var(--accent);
-      }
-
-      h1, h3, h4 {
-        font-weight: bold;
-      }
-
-      header, .description-box, .tabs-container, .tab-content, .contact-container, footer {
-        max-width: 650px;
-        margin: 0 auto 2rem;
-        padding: 1rem;
-        border: 1px solid var(--border);
-        background-color: #111;
-      }
-
-      header h1 {
-        font-size: 1.5rem;
-        text-align: center;
-      }
-
-      .description-box p {
-        text-align: left;
-      }
-
-      .tabs {
-        display: flex;
-      }
-
-      .tab-button {
-        flex: 1;
-        padding: 0.5rem;
-        background-color: #222;
-        border: none;
-        color: var(--foreground);
-        cursor: pointer;
-        border-bottom: 2px solid transparent;
-        font-family: 'Courier New', Courier, monospace;
-      }
-
-      .tab-button:hover {
-        background-color: #333;
-      }
-
-      .tab-button.active {
-        border-bottom: 2px solid var(--primary);
-        font-weight: bold;
-      }
-
-      .tab-content {
-        display: none;
-      }
-
-      .tab-content.active {
-        display: block;
-        padding-top: 1rem;
-      }
-
-      .project {
-        margin-bottom: 1.5rem;
-      }
-
-      .project h3 {
-        color: var(--primary);
-      }
-
-      .contact-container {
-        display: flex;
-        justify-content: space-around;
-      }
-
-      .contact-container a {
-        color: var(--primary);
-      }
-
-      footer {
-        text-align: center;
-        font-size: 0.8rem;
-        color: var(--secondary);
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Max Hampshire</h1>
-    </header>
-
-    <div class="description-box">
-      <p>
-        Programmer & researcher mostly focussing on privacy &
-        decentralised systems. Occasionally also experimental app and web development.
-      </p>
-    </div>
-
-    <main>
-      <div class="tabs-container">
-        <div class="tabs">
-          <button
-            class="tab-button active"
-            onclick="openTab(event, 'current')"
-          >
-            Current Projects
-          </button>
-          <button
-            class="tab-button"
-            onclick="openTab(event, 'previous')"
-          >
-            Previous Projects
-          </button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Centered ASCII Art</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                background-color: #000;
+                color: #fff;
+                font-family: monospace;
+            }
+            .container {
+                text-align: center;
+            }
+            pre {
+                display: inline-block;
+                text-align: left;
+                margin: 0;
+                line-height: 1;
+            }
+            .caption {
+                margin-top: 20px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <pre>
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠉⠙⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠻⣿⣿⣿⣿⣿⣿⣿⠋⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠋⠀⠀⠀⣠⣾⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣄⣀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣄⠀⠀⠀⠉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⢀⣰⣶⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣷⣤⡀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⣰⣾⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠟⠁⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⢠⣾⣿⣿⣿⣿⣿⡿⠿⠛⠛⠋⠛⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠹⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⠋⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⣼⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠛⣿⣿⣿⣿⣿⣇⠀⠀⠀⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⢹⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⢠⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⢸⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣄⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠈⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⣼⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣄⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⢻⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⡇⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⣼⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣷⣆⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣶⣤⣤⣤⣴⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⠟⠉⠀⠀⢀⣶⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⡀⠀⠀⠙⠻⣿⣿⣿⣿⣿⡄⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠏⠀⠀⠀⢰⣿⣿⣿⣿⠟⠋⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠙⣿⣿⣿⣿⣆⡀⠀⠀⠈⠙⠿⢿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠋⠀⠀⠀⢀⣴⣿⣿⣿⠏⠁⠀⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣀⣼⣿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⠈⢽⣿⣿⣿⠉⠀⠀⠀⠀⠀⢀⣴⣾⣿⣿⣿⣿⣧⣀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡅⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⡄⠀⠀⠀⣿⣿⣿⠀⠀⠀⢠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⣿⣿⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣤⣴⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⣿⣿⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⣿⣿⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⣿⣿⣿⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⠀⠀⠀⠉⠻⠿⠿⠿⠿⠟⠀⠀⠀⣸⣿⣿⣿⡄⠀⠀⠈⠻⠿⠿⠿⠿⠟⠉⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+        </pre
+            >
+            <div class="container">Your text caption here</div>
         </div>
-
-        <div class="tab-content-container">
-          <div id="current" class="tab-content active">
-            <div class="project">
-              <h3>Lead DevRel & Integrations @ Nym</h3>
-              <p>
-                Lead DevRel @ <a href="https://nym.com/">Nym</a>, focussing on
-                documentation and initial integration libraries, talks and workshops.
-              </p>
-              <h4>Talks</h4>
-              <ul>
-                <li><a href="https://www.youtube.com/watch?v=V-35d-x9QAQ">Meet Nym DevRel</a></li>
-                <li><a href="https://www.youtube.com/watch?v=wDGh0Y7rKZ4">Building Privacy Enhanced Services @ Nebular Conference</a></li>
-                <li><a href="https://www.youtube.com/watch?v=ba4j44VgCUs">ShipYard Academy Lecture: Network Deepdive</a></li>
-                <li><a href="https://www.youtube.com/watch?v=oqGnRta9sn8">Bitcoin Takeover Pod S12E12</a></li>
-              </ul>
-            </div>
-
-            <div class="project">
-              <h3>Co-Founder @ Nascent</h3>
-              <p>
-                Co-founder of <a href="https://nascent.energy">Nascent</a>, a research and tech studio.
-              </p>
-            </div>
-          </div>
-
-          <div id="previous" class="tab-content">
-            <div class="project">
-              <h3>Co-Founder @ terra0</h3>
-              <p>
-                Co-founder of <a href="https://terra0.org/">terra0</a>, an art and research collective building proof of concepts for autonomous ecosystems.
-              </p>
-            </div>
-            <div class="project">
-              <h3>Developer @ BlockLab Rotterdam</h3>
-              <p>
-                Researcher and developer @ BlockLab Rotterdam working on projects such as
-                <a href="https://press.spglobal.com/2020-10-05-Worlds-First-High-Frequency-Decentralized-Energy-Market-Helps-Drive-Port-of-Rotterdams-Energy-Transition">
-                  decentralised energy grids
-                </a>.
-              </p>
-            </div>
-            <div class="project">
-              <h3>Web Development (various)</h3>
-              <p>
-                Various web development projects for individual clients. List on request.
-              </p>
-            </div>
-            <div class="project">
-              <h3>Research Intern @ INC Amsterdam</h3>
-              <p>
-                Research intern at the
-                <a href="https://networkcultures.org">INC Amsterdam</a>
-                writing and researching new crypto systems, as well as working as a copyeditor for publications such as Alex Foti's
-                <a href="https://networkcultures.org/blog/publication/general-theory-of-the-precariat/">
-                  General Theory of the Precariat
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-container">
-        <a href="mailto:maxhampshire@pm.me">Email</a>
-        <a href="https://github.com/mfahampshire">Github</a>
-        <a href="https://x.com/_wjth">Twitter</a>
-      </div>
-    </main>
-
-    <footer>
-      © Max Hampshire
-    </footer>
-
-    <script>
-      function openTab(evt, tabName) {
-        const tabButtons = document.querySelectorAll(".tab-button");
-        const tabContents = document.querySelectorAll(".tab-content");
-
-        tabButtons.forEach((btn) => btn.classList.remove("active"));
-        tabContents.forEach((content) => content.classList.remove("active"));
-
-        evt.currentTarget.classList.add("active");
-        document.getElementById(tabName).classList.add("active");
-      }
-    </script>
-  </body>
+    </body>
 </html>
